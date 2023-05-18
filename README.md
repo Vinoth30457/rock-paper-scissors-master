@@ -32,7 +32,7 @@ If the player wins, they gain 1 point. If the computer wins, the player loses on
 
 ### Links
 
-- Solution URL: [click here](https://your-solution-url.com)
-- Live Site URL: [click here](https://your-live-site-url.com)
+- Solution URL: [click here](https://github.com/Vinoth30457/rock-paper-scissors-master.git)
+- Live Site URL: [click here](https://incandescent-cajeta-cfdaa4.netlify.app)
 
 **Have fun building!** 🚀
