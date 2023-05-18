@@ -58,9 +58,9 @@ li {
   font-weight: 500;
   cursor: pointer;
   /* customize */
-  background-color: #1c2042;
+  background-color: black;
   color: white;
-  border: 2px solid #1c2042;
+  border: 2px solid black;
 }
 
 .header-container {
