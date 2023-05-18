@@ -80,7 +80,7 @@ function getresult(userchoice, compchoice) {
 const updatescore = (result) => {
   if (result === "WON") {
     userscore = userscore + 1;
-  } else {
+  } else if (result === "LOST") {
     compscore = compscore + 1;
   }
 };
