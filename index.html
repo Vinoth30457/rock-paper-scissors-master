@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+  <title>Rock Paper Scissor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <div class="header-container">
+    <div class="header-img">
+      <img src="./images/logo.svg" alt="logo" class="head-img">
+    </div>
+    <div class="score-container">
+      <p class="score">SCORE</p>
+      <p class="score-point">0</p>
+    </div>
+  </div>
+  <div class="game-container open">
+    <div class="game-img-container">
+      <div class="img-container-paper align" onclick="playgame('paper')">
+        <img src="./images/icon-paper.svg" alt="paper" class="paper">
+      </div>
+      <div class="img-container-scissor align" onclick="playgame('scissor')">
+        <img src="./images/icon-scissors.svg" alt="scissors" class="scissor">
+      </div>
+      <div class="img-container-rock align" onclick="playgame('rock')">
+        <img src="./images/icon-rock.svg" alt="rock" class="rock">
+      </div>
+    </div>
+  </div>
+  <div class="play-container close">
+    <div class="player-pick">
+      <p class="player-sen">YOU PICKED</p>
+      <div class="player">
+        <div class="paper-click close">
+          <div class="player-paper">
+            <img src="./images/icon-paper.svg" alt="paper" class="paper">
+          </div>
+        </div>
+        <div class="scissor-click close">
+          <div class="player-scissor">
+            <img src="./images/icon-scissors.svg" alt="scissors" class="scissor">
+          </div>
+        </div>
+        <div class="rock-click close">
+          <div class="player-rock">
+            <img src="./images/icon-rock.svg" alt="rock" class="rock">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="score-update">
+      <button class="btn btn-play">PLAY AGAIN</button>
+      <div class="message">
+
+      </div>
+    </div>
+    <div class="comp-pick">
+      <p class="comp-sen">COMPUTER PICKED</p>
+      <div class="computer">
+        <div class="comp-paper-click close">
+          <div class="computer-paper">
+            <img src="./images/icon-paper.svg" alt="paper" class="paper">
+          </div>
+        </div>
+        <div class="comp-scissor-click close">
+          <div class="computer-scissor">
+            <img src="./images/icon-scissors.svg" alt="scissors" class="scissor">
+          </div>
+        </div>
+        <div class="comp-rock-click close">
+          <div class="computer-rock">
+            <img src="./images/icon-rock.svg" alt="rock" class="rock">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="result-container">
+    <div class="gameover">
+
+    </div>
+  </div>
+  <div class="close-tag close">
+    <div class="rules-container ">
+      <header class="rules-header">
+        <p class="rulesTxt">Rules</p>
+        <div class="close-img">
+          <img src="./images/icon-close.svg" alt="close" class="img-close">
+        </div>
+      </header>
+      <div class="rules-img">
+        <img src="./images/image-rules.svg" alt="rules" class="rule">
+      </div>
+    </div>
+  </div>
+  <footer>
+    <button class="btn rules">Rules</button>
+
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

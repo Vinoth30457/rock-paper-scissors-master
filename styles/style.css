@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: linear-gradient(to right, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+}
+
+/* global css */
+img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  /* customize */
+  background-color: #1c2042;
+  color: white;
+  border: 2px solid #1c2042;
+}
+
+.header-container {
+  width: 50%;
+  height: 8rem;
+  padding: 1rem;
+  margin: 3rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid hsl(217, 16%, 45%);
+  border-radius: 15px;
+}
+
+.head-img {
+  width: 7rem;
+}
+
+.score-container {
+  background-color: #fff;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.score {
+  color: hsl(217, 16%, 45%);
+}
+
+.score-point {
+  color: hsl(229, 25%, 31%);
+  font-size: 2rem;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-img-container {
+  width: 50vw;
+  height: 30vh;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-image: url(/images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+
+.align {
+  width: 6rem;
+  height: 6rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.rock,
+.paper,
+.scissor {
+  width: 2rem;
+}
+
+
+
+.img-container-paper {
+  border: 10px solid hsl(230, 89%, 65%);
+  border-radius: 50%;
+  grid-column: 1/1;
+  grid-row: 1/1;
+  top: -2rem;
+  left: 11rem;
+}
+
+.img-container-rock {
+  border: 10px solid hsl(349, 71%, 52%);
+  border-radius: 50%;
+  grid-column: 6/6;
+  grid-row: 1.5/2;
+  bottom: -2rem;
+  left: -2.5rem;
+}
+
+.img-container-scissor {
+  border: 10px solid hsl(39, 89%, 49%);
+  border-radius: 50%;
+  grid-column: 10/11;
+  top: -2rem;
+  right: 11rem;
+}
+
+.img-container-paper:hover,
+.img-container-rock:hover,
+.img-container-scissor:hover {
+  cursor: pointer;
+}
+
+
+
+.play-container {
+  height: 30vh;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.play {
+  position: static;
+}
+
+.player-pick,
+.comp-pick {
+  width: 20%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 5rem;
+}
+
+.player-sen,
+.comp-sen {
+  color: #fff;
+}
+
+
+
+.player,
+.computer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.player-paper,
+.computer-paper {
+  border: 10px solid hsl(230, 89%, 65%);
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.player-scissor,
+.computer-scissor {
+  border: 10px solid hsl(39, 89%, 49%);
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.player-rock,
+.computer-rock {
+  border: 10px solid hsl(349, 71%, 52%);
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.player {
+  position: relative;
+}
+
+.score-update {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  font-size: 2rem;
+  text-align: center;
+  color: red;
+  font-weight: 700;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.youwon {
+  color: green;
+}
+
+.draw {
+  color: black;
+}
+
+.gameover {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+
+}
+
+.userwon {
+  color: green;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.userloss {
+  color: red;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 1rem;
+
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameovertxt {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.rules-container {
+  background-color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 15px;
+  position: absolute;
+  top: 12rem;
+}
+
+.img-close {
+  width: 1.5rem;
+}
+
+.img-close:hover {
+  cursor: pointer;
+}
+
+.rulesTxt {
+  color: hsl(229, 25%, 31%);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.rules-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.rules {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: -10rem;
+  margin-right: 5rem;
+}
+
+.open {
+  display: contents;
+}
+
+.close {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {}
+
+/* Medium devices (tablets) */
+
+@media (min-width: 768px) {}
+
+/* Large devices (desktops) */
+
+@media (min-width: 991px) {
+  .play-container {
+    width: 50%;
+  }
+
+  .img-container-paper {
+    top: -1.5rem;
+    left: 15rem;
+  }
+
+  .img-container-scissor {
+    top: -1.5rem;
+    right: 15rem;
+  }
+
+  .img-container-rock {
+    bottom: -2rem;
+    left: -2.75rem;
+  }
+
+
+}
+
+/* Extra large devices (large desktops) */
+
+@media (min-width: 1200px) {}
