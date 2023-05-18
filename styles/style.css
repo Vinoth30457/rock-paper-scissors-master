@@ -15,13 +15,15 @@ html {
 }
 
 body {
+  min-height: 100vh;
+  min-width: 100vw;
   font-family: "Barlow Semi Condensed", sans-serif;
   background: linear-gradient(to right, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
   position: relative;
 }
 
