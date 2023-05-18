@@ -22,16 +22,14 @@ let closex = document.querySelector(".close-img");
 let rulescontainer = document.querySelector(".close-tag");
 let rules = document.querySelector(".rules");
 const playgame = (userinput) => {
-  if (userscore > 10 || compscore > 10) {
-    if (userscore === 10) {
-      const userwon = `<p class='userwon'>YOU WON THE GAME</p>
+  if (userscore === 10) {
+    const userwon = `<p class='userwon'>YOU WON THE GAME</p>
       <p class='gameovertxt'>GAME OVER</p>`;
-      resultcontainerEl.innerHTML = userwon;
-    } else if (compscore === 10) {
-      const userLOSS = `<p class='userloss'>YOU LOSS THE GAME</p>
+    resultcontainerEl.innerHTML = userwon;
+  } else if (compscore === 10) {
+    const userLOSS = `<p class='userloss'>YOU LOSS THE GAME</p>
       <p class='gameovertxt'>GAME OVER</p>`;
-      resultcontainerEl.innerHTML = userLOSS;
-    }
+    resultcontainerEl.innerHTML = userLOSS;
   } else {
     const userchoice = userinput;
     const compchoice = getcomchoice();
